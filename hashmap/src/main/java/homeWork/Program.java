@@ -25,17 +25,11 @@ public class Program {
 
         v = hashMap.remove("+79005551127");
 
-
-
-
-
-
         for (Entity entity: hashMap) {
             System.out.println(entity.key + " : " + entity.value);
         }
 
-
-        //hashMap.displayAllElements();
+        hashMap.displayAllElements();
 
     }
 }

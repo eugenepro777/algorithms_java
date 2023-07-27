@@ -1,7 +1,6 @@
 package homeWork;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 public class HashMap<K, V> implements Iterable<HashMap<K, V>.Entity> {
 
@@ -129,6 +128,7 @@ public class HashMap<K, V> implements Iterable<HashMap<K, V>.Entity> {
         return Math.abs(key.hashCode()) % buckets.length;
     }
 
+//    метод увеличения размера структуры
     private void recalculate(){
         size = 0;
         Bucket<K, V>[] old = buckets;
@@ -146,6 +146,7 @@ public class HashMap<K, V> implements Iterable<HashMap<K, V>.Entity> {
         }
     }
 
+//    метод добавления элемента
     public V put(K key, V value){
 
         if (buckets.length * LOAD_FACTOR <= size){
